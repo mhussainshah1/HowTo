@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Website: How-to ...
+
+Create a website illustrating how to do something. Be as creative as you'd like!
+
+Some examples:
+
+- How to code a website
+- How to build a basic Java app
+- How to renovate a room on a budget
+- How to craft something
+- How to avoid parking/speeding citations
+- How to Photoshop something
+- etc.
+
+The site should contain:
+- A navigation bar on every page
+- At least 3 HTML files
+- Content pages should use a variation of images, paragraphs, divs, lists, and tables.
+- Bootstrap and Google Fonts
+Create your site as a Spring Boot app.
+
+-->
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/style.css}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
+</head>
+<body class="container home">
+
+<div class="container-fluid">
+
+    <div class="col-xs=12">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/compile">Compile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/run">Run</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="col-xs=1">
+        <h1 class="hello-world-title">How to build basic Java app</h1>
+        <h1>My name is Muhammad.</h1>
+    </div>
+</div>
+<!-- Bootstrap JavaScript -->
+<script crossorigin="anonymous"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Home</title>
+
+</head>
+
+
+
+<h1 class="home-title">My<br />Recipe<br />Book</h1>
+-->
+
+
