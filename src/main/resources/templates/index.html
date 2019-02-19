@@ -34,7 +34,7 @@ Create your site as a Spring Boot app.
 <body class="container home">
 
 <div class="container-fluid">
-
+<div class="row">
     <div class="col-xs=12">
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,14 +60,61 @@ Create your site as a Spring Boot app.
             </nav>
         </div>
     </div>
+</div>
+
+
     <div class="col-xs=1">
         <h1 class="hello-world-title">Creating, Running and Packaging Your First Java Application</h1>
         <h1>My name is Muhammad.</h1>
     </div>
+
     <div class="col-xs=12">
         <a href="/index2">Index 2</a>
     </div>
 </div>
+
+
+
+<h2>Creating a project</h2>
+<br>
+Any new development in IntelliJ IDEA starts with creating a project. So let's create one now.
+
+<ol>
+    <li>
+        If no project is currently open in IntelliJ IDEA, click Create New Project on the Welcome screen. Otherwise, select File | New | Project.
+        As a result, the New Project wizard opens.
+    </li>
+</ol>
+
+
+In the left-hand pane, select Java. (We want a Java-enabled project to be created, or, to be more exact, a project with a Java module.)
+
+Specify the JDK that you want to use in your project (the Project SDK field). Do one of the following:
+Select the JDK from the list.
+
+If the desired JDK is already available on your computer but is missing from the list, click New and, in the dialog that opens, select the JDK installation directory.
+
+Click Download JDK.
+
+HWJ004NewProjectJDKSet
+Because our application is going to be a "plain old Java application", we don't need any additional technologies to be supported. So, don't select any of the options under Additional Libraries and Frameworks.
+
+Click Next.
+
+The options on the next page have to do with creating a Java class with a main() method.
+Since we are going to study the very basics of IntelliJ IDEA, and do everything from scratch, we don't need these options at the moment. So, don't select any of the options.
+
+HWJ001NewProjectFromTemplate
+Click Next.
+
+On the next page, specify the project name (e.g. HelloWorld). If necessary, change the project location suggested by IntelliJ IDEA.
+HWJ002NewProjectJavaModuleProjectName
+Click Finish.
+
+Wait while IntelliJ IDEA is creating the project. When this process is complete, the structure of your new project is shown in the Project tool window.
+
+
+
 
 <!-- Bootstrap JavaScript -->
 <script crossorigin="anonymous"

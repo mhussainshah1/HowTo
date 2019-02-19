@@ -35,4 +35,9 @@ public class HomeController {
     public String getForm(){
         return "form";
     }
+
+    @GetMapping("/signin")
+    public String getSignIn(){
+        return "signin";
+    }
 }
