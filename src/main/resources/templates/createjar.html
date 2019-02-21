@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/project">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/compile">Compile and Run</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/createjar">Jar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h1 class="title-style" id="build_artifact">Building the JAR artifact</h1>
+    <ol class="list _decimal">
+        <li> Select <span class="control">Build | Build Artifacts</span>.
+            <figure><img alt="Build Artifacts" src="/img/HWJ043BuildArtifacts.png" height="208" width="233"></figure>
+        </li>
+        <li> Point to <span class="control">HelloWorld:jar</span> and
+            select <span class="control">Build</span>. (In this particular case, <span
+                    class="control">Build</span> is the default action, so you can just press <kbd
+                    class="keystroke">Enter</kbd> instead.)
+            <figure><img alt="Artifact Build" height="137"
+                         src="/img/HWJ044ArtifactBuild.png"
+                         width="189"></figure>
+            <br>If you now look at the <code class="code" data-lang="Java">out/artifacts</code>
+            folder, you'll find your JAR there.
+            <figure><img alt="Artifact Location" height="346"
+                         src="/img/HWJ045ArtifactLocation.png"
+                         width="397"></figure>
+        </li>
+    </ol>
+    <h2>Running the packaged application</h2>
+    <br> To make sure that everything is fine with the JAR, let's run it. To do that, we'll
+    create a JAR Application run configuration and then execute that run configuration.
+    <h1 class="title-style">Creating a JAR Application run configuration</h1>
+    <br> To run Java applications packaged in JARs, IntelliJ IDEA provides the JAR Application
+    run configurations. To create such a configuration:
+    <ol class="list _decimal">
+        <li> Select <span class="control">Run | Edit Configurations</span>.
+        </li>
+        <li> In the <span
+                class="control">Run/Debug Configurations</span> dialog that opens, click <img
+                alt="icons general add svg" class="inline-icon-16"
+                src="/img/icons.general.add.svg@2x.png"
+                width="16"> and select <span class="control">JAR Application</span>.
+            <figure><img alt="HWJ046NewJarAppRunConfig" height="397"
+                         src="/img/HWJ046NewJarAppRunConfig.png"
+                         title="HWJ046NewJarAppRunConfig"
+                         width="580"></figure>
+        </li>
+        <li> Specify the path to the JAR file. (To the right of the <span
+                class="control">Path to JAR</span> field, click <img alt="browseButton" class="inline-icon-15"
+                                                                     height="15"
+                                                                     src="/img/browseButton.png"
+                                                                     title="browseButton"
+                                                                     width="15"> and select the
+            JAR file in the dialog that opens.) <br> The rest of the settings in this case
+            don't matter, however, there's one more thing that we'll do - just for convenience.</li>
+        <li> Under <span class="control">Before launch</span>, click <img
+                alt="icons general add svg" class="inline-icon-16"
+                src="/img/icons.general.add.svg@2x.png"
+                width="16">, select <span class="control">Build Artifacts</span> and select
+            the <span class="control">HelloWorld:jar</span> artifact in the dialog that opens. <br>
+            The <span class="control">Build 'HelloWorld:jar' artifact</span> task is
+            included in the <span class="control">Before launch</span> task list. So each time you
+            execute this run configuration, the artifact will be built automatically.
+            <figure><img alt="HWJ047JarAppRunConfigSettings" height="515"
+                         src="/img/HWJ047JarAppRunConfigSettings.png"
+                         title="HWJ047JarAppRunConfigSettings" width="580"></figure>
+        </li>
+    </ol>
+    <h1 class="title-style" id="run_jar_run_config">Executing the run configuration</h1>
+    <ul>
+        <li> To the right of the run configuration selector, click <img
+                alt="icons toolwindows toolWindowRun svg"
+                class="inline-icon-16" src="/img/icons.toolwindows.toolWindowRun.svg@2x.png"
+                width="16">.
+            <figure><img alt="HWJ048RunJarApp" height="104"
+                         src="/img/HWJ048RunJarApp.png" title="HWJ048RunJarApp"
+                         width="313"></figure>
+            <br> As before, the <span class="control">Run</span> tool window opens and the
+            application output is shown there.
+            <figure><img alt="Jar App Output" height="131"
+                         src="/img/HWJ049JarAppOutput.png" width="580"></figure>
+        </li>
+    </ul>
+    <div data-feedback-placeholder="true"></div>
+    <div class="navigation-links _bottom" data-skip-index="skip">
+        <a class="navigation-links__prev" href="/img/java-se.html">Java SE</a>
+        <a class="navigation-links__next" href="/img/debugging-your-first-java-application.html">
+            Debugging Your First Java Application</a></div>
+</div>
+
+</body>
+</html>

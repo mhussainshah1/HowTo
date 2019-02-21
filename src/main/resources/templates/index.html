@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <!--
 Website: How-to ...
-
 Create a website illustrating how to do something. Be as creative as you'd like!
-
 Some examples:
 
 - How to code a website
@@ -37,36 +35,34 @@ Create your site as a Spring Boot app.
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs=12">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                            class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/project">Project</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/compile">Compile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/run">Run</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+        <div class="col-xs-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse"
+                        type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/project">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/compile">Compile and Run</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/createjar">Jar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </div>
-
     <div>
-        <h1 class="hello-world-title">Creating, Running and Packaging Your First Java Application</h1>
+        <h1 class="title-style">Creating, Running and Packaging Your First Java Application</h1>
         <p>This tutorial illustrates a Java SE application development workflow.The age-old
             <a href="/project/#writing_code">Hello, World</a> application is used as an example.
         <ul>
@@ -75,38 +71,28 @@ Create your site as a Spring Boot app.
             <li><a href="/project#create_class"> Creating a package and a class</a></li>
             <li><a href="/project#writing_code"> Writing code for the HelloWorld class</a>
                 <ul>
-                    <li><a href="/project#use_live_template">
-                        Using a live template for the main() method</a></li>
-                    <li><a href="/project#use_completion">
-                        Using code auto-completion</a></li>
-                    <li><a href="/project#use_live_template_println">
-                        Using a live template for println()</a></li>
+                    <li><a href="/project#use_live_template">Using a live template for the main() method</a></li>
+                    <li><a href="/project#use_completion">Using code auto-completion</a></li>
+                    <li><a href="/project#use_live_template_println">Using a live template for println()</a></li>
                 </ul>
             </li>
-            <li><a href="/project#run_app"> Building and running the application</a></li>
-            <li><a href="/project#remarks"> Remarks: building and running applications</a></li>
-            <li><a href="#package">Packaging the application in a JAR</a>
+            <li><a href="/compile#run_app"> Building and running the application</a></li>
+            <li><a href="/compile#remarks"> Remarks: building and running applications</a></li>
+            <li><a href="/compile#package">Packaging the application in a JAR</a>
                 <ul>
-                    <li><a href="/project#configure_artifact">Creating an artifact configuration for the JAR</a></li>
-                    <li><a href="/project#build_artifact">Building the JAR artifact</a></li>
+                    <li><a href="/compile#configure_artifact">Creating an artifact configuration for the JAR</a></li>
+                    <li><a href="/compile#build_artifact">Building the JAR artifact</a></li>
                 </ul>
             </li>
-            <li><a href="/project#run_jar_artifact">Running the packaged application</a>
+            <li><a href="/createjar#run_jar_artifact">Running the packaged application</a>
                 <ul>
-                    <li><a href="/project#create_jar_run_config">Creating
-                        a JAR Application run configuration</a></li>
-                    <li><a href="/project#run_jar_run_config">Executing
-                        the run configuration</a></li>
+                    <li><a href="/createjar#create_jar_run_config">Creating a JAR Application run configuration</a></li>
+                    <li><a href="/createjar#run_jar_run_config">Executing the run configuration</a></li>
                 </ul>
             </li>
         </ul>
-
-
-    <h4>My name is Muhammad.</h4>
-    <a href="/index2">Index 2</a>
     </div>
 </div>
-
 
 <!-- Bootstrap JavaScript -->
 <script crossorigin="anonymous"
@@ -118,6 +104,5 @@ Create your site as a Spring Boot app.
 <script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 </body>
 </html>

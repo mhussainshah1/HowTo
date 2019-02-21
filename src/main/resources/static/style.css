@@ -1,9 +1,17 @@
-h1{
-    color: red;
-}
-
-.hello-world-title{
+.title-style{
     text-decoration: underline;
     font-family: 'Felipa', cursive;
     font-family: 'Dancing Script', cursive;
+}
+
+.control{
+    font-weight: 600;
+}
+
+strong{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }

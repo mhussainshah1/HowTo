@@ -1,31 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" xmlns:th="www.thymeleaf.org"/>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
-    <title>Run</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link rel="stylesheet" th:href="@{/style.css}" type="text/css"/>
 
+    <title>Run</title>
+
 </head>
 <body class="container run">
 
 <div class="container-fluid">
-    <div class ="row">
+    <div class="row">
         <div class="col-xs=12">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
                 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                        class="navbar-toggler"
-                        data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                        class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -35,22 +32,24 @@
                             <a class="nav-link" href="/project">Project</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/compile">Compile</a>
+                            <a class="nav-link" href="/compile">Compile and Run</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/run">Run</a>
+                            <a class="nav-link" href="/createjar">Jar</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
+
     <div class ="row">
-        <div class="col-xs=1">
+        <div class="col-xs-12">
             <h1 class="hello-world-title">How to Run Java File!</h1>
             <h1>My name is Muhammad.</h1>
         </div>
     </div>
+
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

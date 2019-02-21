@@ -21,6 +21,12 @@ public class HomeController {
         return "compile";
     }
 
+    @GetMapping("/createjar")
+    public String getCreateJar(){
+        return "createjar";
+    }
+
+
     @GetMapping("/run")
     public String getRun(){
         return "run";
@@ -38,6 +44,6 @@ public class HomeController {
 
     @RequestMapping("/index2")
     public String getIndex2(){
-        return "index2";
+        return "createjar";
     }
 }

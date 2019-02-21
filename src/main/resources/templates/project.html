@@ -13,79 +13,341 @@
 
     <title>Creating, Running and Packaging Your First Java Application - Help | IntelliJ IDEA</title>
 </head>
-<body>
+
+<body class="container project">
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs=12">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                            class="navbar-toggler"
-                            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/project">Project</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/compile">Compile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/run">Run</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav><h1>Creating,Running and Packaging Your First Java Application</h1>
-                <p>This tutorial illustrates a Java SE application development workflow.The age-old
-                    <a href="#writing_code">Hello, World</a> application is used as an example.</p>
-                <ul>
-                    <li><p><a href="#create_project">Creating a project</a></p></li>
-                    <li><p><a href="#explore_project_structure"> Exploring the project structure</a></p></li>
-                    <li><p><a href="#create_class"> Creating a package and a class</a></p></li>
-                    <li><a href="#writing_code"> Writing code for the HelloWorld class</a>
-                        <ul>
-                            <li><p><a href="#use_live_template">
-                                Using a live template for the main() method</a></p></li>
-                            <li><p><a href="#use_completion">
-                                Using code auto-completion</a></p></li>
-                            <li><p><a href="#use_live_template_println">
-                                Using a live template for println()</a></p></li>
-                        </ul>
-                    </li>
-                    <li><p><a href="#run_app"> Building and running the application</a></p></li>
-                    <li><p><a href="#remarks"> Remarks: building and running applications</a></p></li>
-                    <li><a href="#package">Packaging the application in a JAR</a>
-                        <ul>
-                            <li><p><a href="#configure_artifact">Creating an artifact configuration for the JAR</a></p></li>
-                            <li><p><a href="#build_artifact">Building the JAR artifact</a></p></li>
-                        </ul>
-                    </li>
-                    <li><a href="#run_jar_artifact">Running the packaged application</a>
-                        <ul>
-                            <li><p><a href="#create_jar_run_config">Creating
-                                a JAR Application run configuration</a></p></li>
-                            <li><p><a href="#run_jar_run_config">Executing
-                                the run configuration</a></p></li>
-                        </ul>
-                    </li>
-                </ul>
 
-            </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse"
+                        type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/project">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/compile">Compile and Run</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/createjar">Jar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </div>
 
     <div>
+        <h1 class="title-style" id="create_project">Creating a project</h1>
+        Any new development in IntelliJ IDEA starts with creating a project.So let's create one now.
+        <ol class="list _decimal">
+            <li> If no project is currently open in IntelliJ IDEA, click
+                <span class="control">Create New Project</span> on the Welcome screen. Otherwise, select
+                <span class="control">File | New | Project</span>. As a result, the
+                <span class="control">New Project</span> wizard opens.
+            </li>
+            <li> In the left-hand pane, select <span class="control">Java</span>.
+                (We want a Java-enabled project to be created, or, to be more exact, a project with a Java module.)
+
+            </li>
+            <li> Specify the <a data-bypass="yes" href="http://en.wikipedia.org/wiki/Java_Development_Kit"
+                                target="_blank"><span>JDK</span></a> that you want to use in your project (the <span
+                    class="control">Project SDK</span> field). Do one of the following:
+                <ul>
+                    <li>Select the JDK from the list.</li>
+                    <li>If the desired JDK is already available on your
+                        computer but is missing from the list, click <span class="control">New</span> and, in
+                        the dialog that opens, select the JDK installation directory.
+                    </li>
+                    <li> Click <span class="control">Download JDK</span>.</li>
+                </ul>
+                <figure><img alt="New Project JDK Set"
+                             width="580"
+                             height="179"
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ004NewProjectJDKSet.png">
+                </figure>
+                Because our application is going to be a "plain old Java application", we
+                don't need any additional technologies to be supported. So, don't select any of the options
+                under <span class="control">Additional Libraries and Frameworks</span>.
+                Click <span class="control">Next</span>.
+            </li>
+            <li> The options on the next page have to do with creating a Java
+                class with a <code class="code" data-lang="Java">main()</code> method.
+                Since we are going to study the very basics of IntelliJ IDEA, and do everything from scratch, we
+                don't need these options at the moment. So, don't select any of the options.
+                <figure><img alt="New Project From Template" height="149"
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ001NewProjectFromTemplate.png"
+                             width="580"></figure>
+                Click <span class="control">Next</span>.
+            </li>
+            <li> On the next page, specify the project name (e.g. <code
+                    class="code" data-lang="Java">HelloWorld</code>). If necessary, change the project location
+                suggested by IntelliJ IDEA.
+                <figure><img alt="New Project Java Module Project Name"
+                             height="163"
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ002NewProjectJavaModuleProjectName.png"
+                             width="580"></figure>
+                Click <span class="control">Finish</span>.
+                Wait while IntelliJ IDEA is creating the project. When this process is
+                complete, the structure of your new project is shown in the
+                <span class="control">Project</span> tool window.
+            </li>
+        </ol>
+        <h1 class="title-style" id="explore_project_structure"> Exploring the project structure</h1>
+        Let's take a quick look at the project structure.
+        <figure><img alt="Project Tool Window Initial State" height="326"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ006ProjectToolWindowInitialState.png"
+                     width="400"></figure>
+        There are two top-level nodes:
+        <ul>
+            <li><span class="control">HelloWorld.</span>
+                This node represents your Java module. The <code class="code" data-lang="Java">.idea</code>
+                folder and the file <code class="code" data-lang="Java">HelloWorld.iml</code>are used to store
+                configuration data for your project and module respectively. The folder
+                <code class="code" data-lang="Java">src</code>
+                is for your source code.
+            </li>
+            <li><span class="control">External Libraries.</span> This is a
+                category that represents all the "external" resources necessary for your development work.
+                Currently in this category are the <code class="code" data-lang="Java">.jar</code> files that
+                make up your JDK.
+            </li>
+        </ul>
+
+        <h1 class="title-style" id="create_class">
+            Creating a package and a class</h1>
+        Now we are going to create a package and a class. Let the package and the class names
+        be <code class="code" data-lang="Java">com.example.helloworld</code> and
+        <code class="code" data-lang="Java">HelloWorld</code> respectively.
+        Though a package can be created separately, we will create both the package and the
+        class at once.
+        <ol class="list _decimal">
+            <li> In the <span class="control">Project</span> tool window,
+                select the <code class="code" data-lang="Java">src</code> folder and press <kbd
+                        class="keystroke">Alt+Insert</kbd>. (Alternatively, you can select <span
+                        class="control">File | New</span>, or <span class="control">New</span> from the context
+                menu for the folder <code class="code" data-lang="Java">src</code>.)
+            </li>
+            <li> In the <span class="control">New</span> menu, select <span
+                    class="control">Java Class</span> (e.g. by pressing <kbd class="keystroke">Enter</kbd>).
+
+                <figure><img alt="Project Tool Window New Class" height="185"
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ010ProjectToolWindowNewClass.png"
+                             width="397"></figure>
+            </li>
+            <li> In the <span class="control">Create New Class</span> dialog
+                that opens, type <code class="code" data-lang="Java">com.example.helloworld.HelloWorld</code> in
+                the <span class="control">Name</span> field. The <span class="control">Class</span> option
+                selected in the <span class="control">Kind</span> list is OK for creating a class. Press <kbd
+                        class="keystroke">Enter</kbd> to create the package and the class, and close the dialog.
+                <figure><img alt="Create New Class Name" height="151"
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ011CreateNewClassName.png"
+                             width="347"></figure>
+                The package <code class="code" data-lang="Java">com.example.helloworld</code>
+                and the class <code class="code" data-lang="Java">HelloWorld</code> are shown in the <span
+                        class="control">Project</span> tool window.
+                <figure><img alt="New Class In Project Tool Window" height="225"
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ011NewClassInProjectToolWindow.png"
+                             width="397"></figure>
+                At the same time, the file <code class="code"
+                                                 data-lang="Java">HelloWorld.java</code>
+                (corresponding to the class) opens in the editor.
+                <figure><img alt="New Class In Editor" height="217"
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ012NewClassInEditor.png"
+                             width="580"></figure>
+            </li>
+        </ol>
+        Note the package statement at the beginning of the file and also the class
+        declaration. When creating the class, IntelliJ IDEA used a file template for a Java class. (IntelliJ
+        IDEA provides a number of predefined file templates for creating various file types.)
+
+        Also note a yellow light bulb <img alt="icons actions intentionBulb svg"
+                                           class="inline-icon-16"
+                                           src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/icons.actions.intentionBulb.svg_2x.png"
+                                           width="16">.
+        This bulb indicates that IntelliJ IDEA has suggestions for the current context. Click the light
+        bulb, or press <kbd class="keystroke">Alt+Enter</kbd> to see the suggestion list.
+        <figure><img alt="Intention Actions Suggestion List" height="280"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ013IntentionActionsSuggestionList.png"
+                     width="580"></figure>
+        At the moment, we are not going to perform any of the actions suggested by IntelliJ
+        IDEA (such actions are called intention actions.)
+        Note, however, that this IntelliJ IDEA feature may sometimes be very useful.
+        Finally, there are code folding markers next to the commented code fragment. Click one
+        of them to collapse that fragment.
+
+        <figure><img alt="Commented Code Folded" height="181"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/HWJ014CommentedCodeFolded.png"
+                     width="580"></figure>
+        <h1 class="title-style" id="writing_code">
+            Writing code for the HelloWorld class</h1>
+        The code in its final state (as you probably know) will look this way:
+        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#_Re7VLiDc"><span
+                class="code-block__copy-button-icon"></span></a>
+            <div id="_Re7VLiDc"><code class="code-block__wrapper"><span class="kn" key="0">package</span> <span
+                    class="nn" key="2">com.example.helloworld</span><span class="o" key="3">;</span>
+
+                <span class="kd" key="5">public</span> <span class="kd" key="7">class</span> <span class="nc"
+                                                                                                   key="9">HelloWorld</span>
+                <span class="o" key="11">{</span>
+                <span class="kd" key="13">public</span> <span class="kd" key="15">static</span> <span class="kt"
+                                                                                                      key="17">void</span>
+                <span class="nf" key="19">main</span><span class="o" key="20">(</span><span class="n"
+                                                                                            key="21">String</span><span
+                        class="o" key="22">[]</span> <span class="n" key="24">args</span><span class="o"
+                                                                                               key="25">)</span>
+                <span class="o" key="27">{</span>
+                <span class="n" key="29">System</span><span class="o" key="30">.</span><span class="na"
+                                                                                             key="31">out</span><span
+                        class="o" key="32">.</span><span class="na" key="33">println</span><span class="o"
+                                                                                                 key="34">(</span><span
+                        class="s" key="35">"Hello, World!"</span><span class="o" key="36">);</span>
+                <span class="o" key="38">}</span>
+                <span class="o" key="40">}</span></code></div>
+        </div>
+        The package statement and the class declaration are already there. Now we are going to
+        add the missing couple of lines.
+        Press <kbd class="keystroke">Shift+Enter</kbd>. (In contrast to <kbd
+            class="keystroke">Enter</kbd>, <kbd class="keystroke">Shift+Enter</kbd> starts a new line
+        without breaking the current one.)
+        <figure><img alt="HWJ015NewLine" height="206" id="fa7dc044"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779315/java/HWJ015NewLine.png"
+                     title="HWJ015NewLine" width="580"></figure>
+        <h1 class="title-style" id="use_live_template">
+            Using a live template for the main() method</h1>
+        The line
+        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#iwoKxfcK5G"><span
+                class="code-block__copy-button-icon"></span></a>
+            <div><code class="code-block__wrapper"><span class="kd" key="0">public</span> <span
+                    class="kd" key="2">static</span> <span class="kt" key="4">void</span> <span class="nf"
+                                                                                                key="6">main</span><span
+                    class="o" key="7">(</span><span class="n" key="8">String</span><span class="o"
+                                                                                         key="9">[]</span>
+                <span class="n" key="11">args</span><span class="o" key="12">)</span> <span class="o" key="14">{}</span></code>
+            </div>
+        </div>
+        may well be typed. However, we suggest that you use a different method. Type <code
+            class="code" data-lang="Java">p</code> and press <kbd class="keystroke">Ctrl+J</kbd>.
+        <figure><img height="191"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ016psvm.png"
+                     alt="psvm" width="580"></figure>
+        Select <span class="control">psvm - main() method declaration</span>. (Use the <kbd
+            class="keystroke">Up</kbd> and <kbd class="keystroke">Down</kbd> arrow keys for moving within
+        the suggestion list, <kbd class="keystroke">Enter</kbd> for selecting a highlighted element.)
+        Here is the result:
+        <figure><img alt="Main Method Inserted" height="186"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ017MainMethodInserted.png"
+                     title="Main Method Inserted"
+                     width="580"></figure>
+        IntelliJ IDEA provides code snippets called live templates.
+        <code class="code" data-lang="Java">psvm</code>
+        is an abbreviation for one of such templates. To insert a live template into your code, you can use
+        <span class="menupath" data-skip-index="skip">Code | Insert Live Template</span> or <kbd
+            class="keystroke">Ctrl+J</kbd>.
+
+        <h1 class="title-style" id="use_completion">
+            Using code auto-completion</h1>
+        Now, it's time to add the remaining line of code
+        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#luK-ROSVNh"><span
+                class="code-block__copy-button-icon"></span></a>
+            <div><code class="code-block__wrapper"><span class="n" key="0">System</span><span
+                    class="o" key="1">.</span><span class="na" key="2">out</span><span class="o"
+                                                                                       key="3">.</span><span
+                    class="na" key="4">println</span><span class="o" key="5">(</span><span class="s" key="6">"Hello, World!"</span><span
+                    class="o" key="7">);</span></code></div>
+        </div>
+        We'll do that using code auto-completion.
+        Type <code class="code" data-lang="Java">Sy</code>
+        The code completion suggestion list is shown.
+        <figure><img alt="Insert System" height="191"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/HWJ018InsertSystem.png"
+                     title="HWJ018InsertSystem"
+                     width="580">
+        </figure>
+        Select <span class="control">System (java.lang)</span> by pressing <kbd
+            class="keystroke">Enter</kbd>.
+        Type <code class="code" data-lang="Java">.o</code> and press
+        <kbd class="keystroke">Ctrl+.</kbd>.
+
+        <figure><img alt="Insert Out" height="191"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/HWJ020InsertOut.png"
+                     title="HWJ020InsertOut" width="580">
+        </figure>
+        <code class="code" data-lang="Java">out</code> is inserted followed by a dot. (You can
+        select an item in the suggestion list by pressing <kbd class="keystroke">Ctrl+.</kbd>. In that case,
+        the selected item is inserted into the editor followed by a dot.)
+        Type <code class="code" data-lang="Java">p</code> and then find and select <span
+            class="control">println(String x)</span>.
+        <figure><img alt="Insert Print Ln" height="191"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ022InsertPrintLn.png"
+                     title="HWJ022InsertPrintLn"
+                     width="580">
+        </figure>
+        IntelliJ IDEA prompts you which parameter types can be used in the current
+        context.
+        <figure><img alt="Print Ln Inserted" height="340"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ023PrintLnInserted.png"
+                     title="HWJ023PrintLnInserted"
+                     width="580"></figure>
+        Type <code class="code" data-lang="Java">"</code>
+        The second quotation mark is inserted automatically and the cursor is placed between
+        the quotation marks. Type <code class="code" data-lang="Java">Hello, World!</code>
+        <figure><img alt="Code Ready" height="191"
+                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ024CodeReady.png"
+                     title="HWJ024CodeReady" width="580">
+        </figure>
+        The code at this step is ready.
+
+        <h1 class="title-style" id="use_live_template_println">
+            Using a live template for println()</h1>
+        As a side note, we could have inserted the call to <code class="code"
+                                                                 data-lang="Java">println()</code>
+        by using a live template (<code class="code" data-lang="Java">sout</code>).
+        If you think that it's enough for live templates, proceed to <a
+            href="#run_app">running the
+        application</a>. Otherwise, try that now as an additional exercise. Delete
+        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#tUeP-FTri-"><span
+                class="code-block__copy-button-icon"></span></a>
+            <div id="tUeP-FTri-"><code class="code-block__wrapper"><span class="n" key="0">System</span><span
+                    class="o" key="1">.</span><span class="na" key="2">out</span><span class="o"
+                                                                                       key="3">.</span><span
+                    class="na" key="4">println</span><span class="o" key="5">(</span><span class="s" key="6">"Hello, World!"</span><span
+                    class="o" key="7">);</span></code></div>
+        </div>
+        Type <code class="code" data-lang="Java">s</code>, press <kbd class="keystroke">Ctrl+J</kbd> and select
+        <span class="control">sout - Prints a string to System.out</span>.
+        The line
+        <div class="code-block">
+            <a class="code-block__copy-button" data-clipboard-target="#gHQ22JADjJ">
+                <span class="code-block__copy-button-icon"></span></a>
+            <div>
+                <code class="code-block__wrapper">
+                    <span class="n" key="0">System</span>
+                    <span class="o" key="1">.</span>
+                    <span class="na" key="2">out</span>
+                    <span class="o" key="3">.</span>
+                    <span class="na" key="4">println</span>
+                    <span class="o" key="5">();</span>
+                </code>
+            </div>
+        </div>
+        is added and the cursor is placed between
+        <code class="code" data-lang="Java">(</code>and
+        <code class="code" data-lang="Java">)</code>.Type
+        <code class="code" data-lang="Java">"</code> and then type
+        <code class="code" data-lang="Java">Hello, World!</code>
 
     </div>
-    <h1 class="hello-world-title">Creating, Running and Packaging Your First Java Application</h1>
-    <h1>My name is Muhammad.</h1>
-    <a href="/index2">Index 2</a>
+
 </div>
 
 <!-- Optional JavaScript -->

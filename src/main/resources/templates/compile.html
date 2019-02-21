@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" xmlns:th="www.thymeleaf.org"/>
+    <meta charset="utf-8"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -16,35 +16,170 @@
 <body class="container compile">
 
 <div class="container-fluid">
-    <div class="col-xs=12">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler"
-                    data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/project">Project</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/compile">Compile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/run">Run</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <div class="row">
+        <div class="col-xs-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse"
+                        type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/project">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/compile">Compile and Run</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/createjar">Jar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
-    <div class="col-xs=1">
-        <h1 class="hello-world-title">How to Compile Java File!</h1>
-        <h1>My name is Muhammad.</h1>
+
+    <div>
+        <h1 class="title-style" id="run_app">Building and running the application</h1>
+         Classes with a <code class="code" data-lang="Java">main()</code> method can be run
+        right from the editor. To show that, there are the green arrow markers
+        (<img
+            alt="icons toolwindows toolWindowRun svg"
+            class="inline-icon-16"
+            src="/img/icons.toolwindows.toolWindowRun.svg@2x.png"
+            width="16">)
+        in the left margin.
+         Click one of the markers and select <span class="control">Run 'HelloWorld.main()'</span>.
+        <figure><img alt="Run Hello World" height="239" src="/img/HWJ028RunHelloWorld.png" width="580"></figure>
+         Wait while IntelliJ IDEA is compiling the class. When the compilation is complete, the
+        <span class="control">Run</span> tool window opens at the bottom of the screen.
+        <figure><img alt="Run Tool Window" height="131"
+                     src="/img/HWJ029RunToolWindow.png"
+                     width="580">
+        </figure>
+        On the first line, there is a fragment of the command that IntelliJ IDEA used to run
+        the class. (Click the fragment to see the whole command line including all options and arguments.)
+        The last line shows that the process has exited normally, and no infinite loops occurred. And,
+        finally, you see the program output <code class="code" data-lang="Java">Hello, World!</code> between
+        these lines.
+        
+        <h1 class="title-style">Remarks: building and running applications</h1>
+         Some remarks related to building and running applications in IntelliJ IDEA:
+        <ul>
+            <li> Prior to running the class, IntelliJ IDEA has automatically
+                compiled it. When necessary, you can initiate the compilation yourself. The corresponding
+                options can be found in the <span class="control">Build</span> menu.
+                <figure><img alt="Build Menu" height="208"
+                             src="/img/HWJ025BuildMenu.png"
+                             width="293"></figure>
+                 Many of these options are also available as context menu commands in the 
+                <span class="control">Project</span> tool window and in the editor.
+                 Finally, there is an icon in the upper-right part of the workspace that
+                corresponds to the <span class="control">Build Project</span> command (<img alt="build"
+                                                                                            class="inline-icon-14"
+                                                                                            height="14"
+                                                                                            src="/img/build.png"
+                                                                                            width="14">).
+                
+                <figure><img alt="Build Icon" height="104"
+                             src="/img/HWJ025BuildIcon.png"
+                             width="300"></figure>
+            </li>
+            <li> The options for running and debugging applications can be
+                found in the <span class="control">Run</span> menu.
+                <figure><img alt="Run Menu" height="235"
+                             src="/img/HWJ030RunMenu.png"
+                             width="349"></figure>
+                 As in the case of the build operations, the run options can also be accessed
+                from the <span class="control">Project</span> tool window and the editor, as well as by
+                means of controls in the upper-right part of the workspace. 
+                <figure><img alt="Run Tool bar Buttons" height="19"
+                             src="/img/HWJ031RunToolbarButtons.png"
+                             width="197"></figure>
+            </li>
+            <li> Applications in IntelliJ IDEA are run according to what is
+                called run/debug configurations. Such configurations, generally, should be created prior to
+                running an application.  When you performed the <span class="control">Run 'HelloWorld.main()'</span>
+                command, IntelliJ IDEA, first, created a run configuration and then executed it.
+                 The name of this run configuration (HelloWorld) is now shown in the run/debug
+                configuration selector to the left of <img alt="icons toolwindows toolWindowRun svg"
+                                                           class="inline-icon-16"
+                                                           src="/img/icons.toolwindows.toolWindowRun.svg@2x.png"
+                                                           width="16">.
+                 The HelloWorld configuration now exists as a temporary configuration and, if
+                necessary, you can save it to make it permanent.
+                <figure><img alt="HWJ032RunConfigSelectorMenu" height="100"
+                             src="/img/HWJ032RunConfigSelectorMenu.png"
+                             title="HWJ032RunConfigSelectorMenu" width="225"></figure>
+            </li>
+            <li> Run/debug configurations can do a lot more than just run
+                applications. They can also build applications and perform other useful tasks. 
+                If you look at the settings for the HelloWorld run configuration (<span class="control">Run | Edit Configurations</span>
+                or <span class="control">Edit Configurations</span> from the run configuration selector),
+                you'll see that the <span class="control">Build</span> option is included by default in the
+                <span class="control">Before launch</span> task list. That's why IntelliJ IDEA compiled the
+                class when you performed the <span class="control">Run 'HelloWorld.main()'</span> command.
+                
+                <figure><img alt="HWJ033RunConfigSettings" height="199"
+                             src="/img/HWJ033RunConfigSettings.png"
+                             width="580"></figure>
+            </li>
+            <li> If you look at the <span class="control">Project</span> tool
+                window, you'll see that now there is the folder <code class="code" data-lang="Java">out</code>
+                there. This is the project output folder.  Inside it is the module output
+                folder (<code class="code" data-lang="Java">production\HelloWorld</code>), the folder
+                structure for the package <code class="code" data-lang="Java">com.example.helloworld</code>
+                and the compiled class file <code class="code" data-lang="Java">HelloWorld.class</code>.
+                <figure><img alt="Hello World In Explorer" height="379"
+                             src="/img/HWJ027HelloWorldInExplorer.png"
+                             width="397"></figure>
+                </li>
+        </ul>
+        <h1 class="title-style" id="package">Packaging the application in a JAR</h1>
+         When happy with your application, you may want to package it in a Java archive (<a
+            data-bypass="yes" href="https://en.wikipedia.org/wiki/JAR_(file_format)"
+            target="_blank"><span>JAR</span></a>) for distribution. To do that, you should create an artifact configuration for
+        your JAR and then build the artifact.
+        <h1 class="title-style" id="configure_artifact">Creating an artifact configuration for the JAR</h1>
+        <ol class="list _decimal">
+            <li> Select <span class="control">File | Project Structure</span>
+                to open the <span class="control">Project Structure</span> dialog.</li>
+            <li> Under <span class="control">Project Settings</span>, select
+                <span class="control">Artifacts</span>.</li>
+            <li> Click <img alt="icons general add svg"
+                                class="inline-icon-16"
+                                src="/img/icons.general.add.svg@2x.png"
+                                width="16">, point
+                to <span class="control">JAR</span> and select <span
+                        class="control">From modules with dependencies</span>.
+                
+                <figure><img alt="New Artifact" height="255"
+                             src="/img/HWJ041NewArtifact.png" title="HWJ041NewArtifact"
+                             width="580"></figure>
+                </li>
+            <li> In the dialog that opens, specify the main application class.
+                (To the right of the <span class="control">Main Class</span> field, click <img
+                        alt="browseButton" class="inline-icon-15" height="15"
+                        src="/img/browseButton.png" title="browseButton" width="15"> and
+                select <span
+                        class="control">HelloWorld (com.example.helloworld)</span> in the dialog that opens.)
+                <figure><img alt="New Artifact Create Jar From Modules"
+                             height="337"
+                             src="/img/HWJ041NewArtifactCreateJarFromModules.png"
+                             width="496"></figure>
+                 As a result, the artifact configuration is created and its settings are shown
+                in the right-hand part of the <span class="control">Project Structure</span> dialog.
+                <figure><img alt="HWJ042ArtifactSettings" height="399"
+                             src="/img/HWJ042ArtifactSettings.png"
+                             width="580"></figure>
+            </li>
+            <li>Click <span class="control">OK</span>.</li>
+        </ol>
     </div>
 </div>
 <!-- Optional JavaScript -->
