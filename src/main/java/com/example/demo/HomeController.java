@@ -11,9 +11,9 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping("/index2")
-    public String getIndex2(){
-        return "index2";
+    @GetMapping("/project")
+    public String getProject(){
+        return "project";
     }
 
     @GetMapping("/compile")
@@ -26,9 +26,9 @@ public class HomeController {
         return "run";
     }
 
-    @GetMapping("/test")
-    public String getTest(){
-        return "test";
+    @GetMapping("/signin")
+    public String getSignIn(){
+        return "signin";
     }
 
     @GetMapping("/form")
@@ -36,8 +36,8 @@ public class HomeController {
         return "form";
     }
 
-    @GetMapping("/signin")
-    public String getSignIn(){
-        return "signin";
+    @RequestMapping("/index2")
+    public String getIndex2(){
+        return "index2";
     }
 }
