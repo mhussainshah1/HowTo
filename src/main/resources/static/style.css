@@ -1,7 +1,6 @@
 .title-style{
     text-decoration: underline;
-    font-family: 'Felipa', cursive;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Felipa','Dancing Script', cursive;
 }
 
 .control{
