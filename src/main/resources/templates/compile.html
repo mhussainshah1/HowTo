@@ -69,7 +69,6 @@
         The last line shows that the process has exited normally, and no infinite loops occurred. And,
         finally, you see the program output <code class="code" data-lang="Java">Hello, World!</code> between
         these lines.
-        
         <h1 class="title-style">Remarks: building and running applications</h1>
          Some remarks related to building and running applications in IntelliJ IDEA:
         <ul>
@@ -87,14 +86,15 @@
                                                                                             height="14"
                                                                                             src="/img/build.png"
                                                                                             width="14">).
-                
-                <figure><img alt="Build Icon" height="104"
+                <figure><img alt="Build Icon"
+                             height="104"
                              src="/img/HWJ025BuildIcon.png"
                              width="300"></figure>
             </li>
             <li> The options for running and debugging applications can be
                 found in the <span class="control">Run</span> menu.
-                <figure><img alt="Run Menu" height="235"
+                <figure><img alt="Run Menu"
+                             height="235"
                              src="/img/HWJ030RunMenu.png"
                              width="349"></figure>
                  As in the case of the build operations, the run options can also be accessed
@@ -115,7 +115,7 @@
                                                            width="16">.
                  The HelloWorld configuration now exists as a temporary configuration and, if
                 necessary, you can save it to make it permanent.
-                <figure><img alt="HWJ032RunConfigSelectorMenu" height="100"
+                <figure><img alt="Run Config Selector Menu" height="100"
                              src="/img/HWJ032RunConfigSelectorMenu.png"
                              title="HWJ032RunConfigSelectorMenu" width="225"></figure>
             </li>
@@ -127,7 +127,7 @@
                 <span class="control">Before launch</span> task list. That's why IntelliJ IDEA compiled the
                 class when you performed the <span class="control">Run 'HelloWorld.main()'</span> command.
                 
-                <figure><img alt="HWJ033RunConfigSettings" height="199"
+                <figure><img alt="Run Config Settings" height="199"
                              src="/img/HWJ033RunConfigSettings.png"
                              width="580"></figure>
             </li>
@@ -137,9 +137,11 @@
                 folder (<code class="code" data-lang="Java">production\HelloWorld</code>), the folder
                 structure for the package <code class="code" data-lang="Java">com.example.helloworld</code>
                 and the compiled class file <code class="code" data-lang="Java">HelloWorld.class</code>.
-                <figure><img alt="Hello World In Explorer" height="379"
+                <figure>
+                    <img alt="Hello World In Explorer" height="379"
                              src="/img/HWJ027HelloWorldInExplorer.png"
-                             width="397"></figure>
+                             width="397">
+                </figure>
                 </li>
         </ul>
         <h1 class="title-style" id="package">Packaging the application in a JAR</h1>
@@ -150,26 +152,28 @@
         <h1 class="title-style" id="configure_artifact">Creating an artifact configuration for the JAR</h1>
         <ol class="list _decimal">
             <li> Select <span class="control">File | Project Structure</span>
-                to open the <span class="control">Project Structure</span> dialog.</li>
+                to open the <span class="control">Project Structure</span> dialog.
+            </li>
             <li> Under <span class="control">Project Settings</span>, select
-                <span class="control">Artifacts</span>.</li>
+                <span class="control">Artifacts</span>.
+            </li>
             <li> Click <img alt="icons general add svg"
                                 class="inline-icon-16"
                                 src="/img/icons.general.add.svg@2x.png"
-                                width="16">, point
-                to <span class="control">JAR</span> and select <span
-                        class="control">From modules with dependencies</span>.
-                
-                <figure><img alt="New Artifact" height="255"
-                             src="/img/HWJ041NewArtifact.png" title="HWJ041NewArtifact"
-                             width="580"></figure>
-                </li>
+                                width="16">, point to <span class="control">JAR</span> and select
+                <span class="control">From modules with dependencies</span>.
+                <figure>
+                    <img alt="New Artifact"
+                             height="255"
+                             src="/img/HWJ041NewArtifact.png"
+                             width="580">
+                </figure>
+            </li>
             <li> In the dialog that opens, specify the main application class.
                 (To the right of the <span class="control">Main Class</span> field, click <img
                         alt="browseButton" class="inline-icon-15" height="15"
-                        src="/img/browseButton.png" title="browseButton" width="15"> and
-                select <span
-                        class="control">HelloWorld (com.example.helloworld)</span> in the dialog that opens.)
+                        src="/img/browseButton.png" title="browseButton" width="15"> and select
+                <span  class="control">HelloWorld (com.example.helloworld)</span> in the dialog that opens.)
                 <figure><img alt="New Artifact Create Jar From Modules"
                              height="337"
                              src="/img/HWJ041NewArtifactCreateJarFromModules.png"
@@ -183,9 +187,7 @@
             <li>Click <span class="control">OK</span>.</li>
         </ol>
     </div>
-
 </div>
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

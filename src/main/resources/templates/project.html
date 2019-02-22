@@ -3,11 +3,11 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
     <link rel="stylesheet" th:href="@{/style.css}" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Felipa" rel="stylesheet">
     <title>Creating, Running and Packaging Your First Java Application - Help | IntelliJ IDEA</title>
@@ -63,16 +63,15 @@
                     class="control">Project SDK</span> field). Do one of the following:
                 <ul>
                     <li>Select the JDK from the list.</li>
-                    <li>If the desired JDK is already available on your
-                        computer but is missing from the list, click <span class="control">New</span> and, in
-                        the dialog that opens, select the JDK installation directory.
+                    <li>If the desired JDK is already available on your computer but is missing from the list, click
+                        <span class="control">New</span> and, in the dialog that opens, select the JDK installation directory.
                     </li>
                     <li> Click <span class="control">Download JDK</span>.</li>
                 </ul>
                 <figure><img alt="New Project JDK Set"
-                             width="580"
                              height="179"
-                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ004NewProjectJDKSet.png">
+                             src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ004NewProjectJDKSet.png"
+                             width="580">
                 </figure>
                 Because our application is going to be a "plain old Java application", we
                 don't need any additional technologies to be supported. So, don't select any of the options
@@ -88,8 +87,8 @@
                              width="580"></figure>
                 Click <span class="control">Next</span>.
             </li>
-            <li> On the next page, specify the project name (e.g. <code
-                    class="code" data-lang="Java">HelloWorld</code>). If necessary, change the project location
+            <li> On the next page, specify the project name (e.g.
+                <code class="code" data-lang="Java">HelloWorld</code>). If necessary, change the project location
                 suggested by IntelliJ IDEA.
                 <figure><img alt="New Project Java Module Project Name"
                              height="163"
@@ -122,12 +121,11 @@
             </li>
         </ul>
 
-        <h1 class="title-style" id="create_class">
-            Creating a package and a class</h1>
-        Now we are going to create a package and a class. Let the package and the class names
-        be <code class="code" data-lang="Java">com.example.helloworld</code> and
-        <code class="code" data-lang="Java">HelloWorld</code> respectively.
-        Though a package can be created separately, we will create both the package and the
+        <h1 class="title-style" id="create_class">Creating a package and a class</h1>
+        Now we are going to create a package and a class. Let the package and the class names be
+        <code class="code" data-lang="Java">com.example.helloworld</code> and
+        <code class="code" data-lang="Java">HelloWorld</code> respectively. Though a package can be created separately,
+        we will create both the package and the
         class at once.
         <ol class="list _decimal">
             <li> In the <span class="control">Project</span> tool window,
@@ -152,8 +150,8 @@
                              src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779313/java/HWJ011CreateNewClassName.png"
                              width="347"></figure>
                 The package <code class="code" data-lang="Java">com.example.helloworld</code>
-                and the class <code class="code" data-lang="Java">HelloWorld</code> are shown in the <span
-                        class="control">Project</span> tool window.
+                and the class <code class="code" data-lang="Java">HelloWorld</code> are shown in the
+                <span class="control">Project</span> tool window.
                 <figure><img alt="New Class In Project Tool Window" height="225"
                              src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ011NewClassInProjectToolWindow.png"
                              width="397"></figure>
@@ -168,7 +166,6 @@
         Note the package statement at the beginning of the file and also the class
         declaration. When creating the class, IntelliJ IDEA used a file template for a Java class. (IntelliJ
         IDEA provides a number of predefined file templates for creating various file types.)
-
         Also note a yellow light bulb <img alt="icons actions intentionBulb svg"
                                            class="inline-icon-16"
                                            src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/icons.actions.intentionBulb.svg_2x.png"
@@ -183,62 +180,77 @@
         Note, however, that this IntelliJ IDEA feature may sometimes be very useful.
         Finally, there are code folding markers next to the commented code fragment. Click one
         of them to collapse that fragment.
-
         <figure><img alt="Commented Code Folded" height="181"
                      src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/HWJ014CommentedCodeFolded.png"
                      width="580"></figure>
-        <h1 class="title-style" id="writing_code">
-            Writing code for the HelloWorld class</h1>
+        <h1 class="title-style" id="writing_code"> Writing code for the HelloWorld class</h1>
         The code in its final state (as you probably know) will look this way:
-        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#_Re7VLiDc"><span
-                class="code-block__copy-button-icon"></span></a>
-            <div id="_Re7VLiDc"><code class="code-block__wrapper"><span class="kn" key="0">package</span> <span
-                    class="nn" key="2">com.example.helloworld</span><span class="o" key="3">;</span>
-
-                <span class="kd" key="5">public</span> <span class="kd" key="7">class</span> <span class="nc"
-                                                                                                   key="9">HelloWorld</span>
+        <div class="code-block">
+            <a class="code-block__copy-button" data-clipboard-target="#_Re7VLiDc">
+                <span class="code-block__copy-button-icon"></span></a>
+            <div id="_Re7VLiDc"><code class="code-block__wrapper">
+                <span class="kn"key="0">package</span>
+                <span class="nn"key="2">com.example.helloworld</span>
+                <span class="o" key="3">;</span>
+                <span class="kd"key="5">public</span>
+                <span class="kd"key="7">class</span>
+                <span class="nc"key="9">HelloWorld</span>
                 <span class="o" key="11">{</span>
-                <span class="kd" key="13">public</span> <span class="kd" key="15">static</span> <span class="kt"
-                                                                                                      key="17">void</span>
-                <span class="nf" key="19">main</span><span class="o" key="20">(</span><span class="n"
-                                                                                            key="21">String</span><span
-                        class="o" key="22">[]</span> <span class="n" key="24">args</span><span class="o"
-                                                                                               key="25">)</span>
+                <span class="kd"key="13">public</span>
+                <span class="kd"key="15">static</span>
+                <span class="kt"key="17">void</span>
+                <span class="nf"key="19">main</span>
+                <span class="o" key="20">(</span>
+                <span class="n" key="21">String</span>
+                <span class="o" key="22">[]</span>
+                <span class="n" key="24">args</span>
+                <span class="o" key="25">)</span>
                 <span class="o" key="27">{</span>
-                <span class="n" key="29">System</span><span class="o" key="30">.</span><span class="na"
-                                                                                             key="31">out</span><span
-                        class="o" key="32">.</span><span class="na" key="33">println</span><span class="o"
-                                                                                                 key="34">(</span><span
-                        class="s" key="35">"Hello, World!"</span><span class="o" key="36">);</span>
+                <span class="n" key="29">System</span>
+                <span class="o" key="30">.</span>
+                <span class="na"key="31">out</span>
+                <span class="o" key="32">.</span>
+                <span class="na"key="33">println</span>
+                <span class="o" key="34">(</span>
+                <span class="s" key="35">"Hello, World!"</span>
+                <span class="o" key="36">);</span>
                 <span class="o" key="38">}</span>
-                <span class="o" key="40">}</span></code></div>
+                <span class="o" key="40">}</span></code>
+            </div>
         </div>
         The package statement and the class declaration are already there. Now we are going to
-        add the missing couple of lines.
-        Press <kbd class="keystroke">Shift+Enter</kbd>. (In contrast to <kbd
-            class="keystroke">Enter</kbd>, <kbd class="keystroke">Shift+Enter</kbd> starts a new line
+        add the missing couple of lines. Press <kbd class="keystroke">Shift+Enter</kbd>. (In contrast to
+        <kbd class="keystroke">Enter</kbd>, <kbd class="keystroke">Shift+Enter</kbd> starts a new line
         without breaking the current one.)
-        <figure><img alt="HWJ015NewLine" height="206" id="fa7dc044"
+        <figure><img alt="New Line"
+                     height="206"
                      src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779315/java/HWJ015NewLine.png"
-                     title="HWJ015NewLine" width="580"></figure>
-        <h1 class="title-style" id="use_live_template">
-            Using a live template for the main() method</h1>
+                     width="580"></figure>
+        <h1 class="title-style" id="use_live_template">Using a live template for the main() method</h1>
         The line
         <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#iwoKxfcK5G"><span
                 class="code-block__copy-button-icon"></span></a>
-            <div><code class="code-block__wrapper"><span class="kd" key="0">public</span> <span
-                    class="kd" key="2">static</span> <span class="kt" key="4">void</span> <span class="nf"
-                                                                                                key="6">main</span><span
-                    class="o" key="7">(</span><span class="n" key="8">String</span><span class="o"
-                                                                                         key="9">[]</span>
-                <span class="n" key="11">args</span><span class="o" key="12">)</span> <span class="o" key="14">{}</span></code>
+            <div>
+                <code class="code-block__wrapper">
+                    <span class="kd"key="0">public</span>
+                    <span class="kd"key="2">static</span>
+                    <span class="kt"key="4">void</span>
+                    <span class="nf"key="6">main</span>
+                    <span class="o" key="7">(</span>
+                    <span class="n" key="8">String</span>
+                    <span class="o" key="9">[]</span>
+                    <span class="n" key="11">args</span>
+                    <span class="o" key="12">)</span>
+                    <span class="o" key="14">{}</span>
+                </code>
             </div>
         </div>
-        may well be typed. However, we suggest that you use a different method. Type <code
-            class="code" data-lang="Java">p</code> and press <kbd class="keystroke">Ctrl+J</kbd>.
-        <figure><img height="191"
+        may well be typed. However, we suggest that you use a different method. Type
+        <code class="code" data-lang="Java">p</code> and press <kbd class="keystroke">Ctrl+J</kbd>.
+        <figure><img alt="psvm"
+                     height="191"
                      src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ016psvm.png"
-                     alt="psvm" width="580"></figure>
+                     width="580"></figure>
         Select <span class="control">psvm - main() method declaration</span>. (Use the <kbd
             class="keystroke">Up</kbd> and <kbd class="keystroke">Down</kbd> arrow keys for moving within
         the suggestion list, <kbd class="keystroke">Enter</kbd> for selecting a highlighted element.)
@@ -252,75 +264,81 @@
         is an abbreviation for one of such templates. To insert a live template into your code, you can use
         <span class="menupath" data-skip-index="skip">Code | Insert Live Template</span> or <kbd
             class="keystroke">Ctrl+J</kbd>.
-
-        <h1 class="title-style" id="use_completion">
-            Using code auto-completion</h1>
+        <h1 class="title-style" id="use_completion"> Using code auto-completion</h1>
         Now, it's time to add the remaining line of code
-        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#luK-ROSVNh"><span
-                class="code-block__copy-button-icon"></span></a>
-            <div><code class="code-block__wrapper"><span class="n" key="0">System</span><span
-                    class="o" key="1">.</span><span class="na" key="2">out</span><span class="o"
-                                                                                       key="3">.</span><span
-                    class="na" key="4">println</span><span class="o" key="5">(</span><span class="s" key="6">"Hello, World!"</span><span
-                    class="o" key="7">);</span></code></div>
+        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#luK-ROSVNh">
+            <span class="code-block__copy-button-icon"></span></a>
+            <div>
+                <code class="code-block__wrapper">
+                    <span class="n" key="0">System</span>
+                    <span class="o" key="1">.</span>
+                    <span class="na"key="2">out</span>
+                    <span class="o" key="3">.</span>
+                    <span class="na"key="4">println</span>
+                    <span class="o" key="5">(</span>
+                    <span class="s" key="6">"Hello, World!"</span>
+                    <span class="o" key="7">);</span>
+                </code>
+            </div>
         </div>
-        We'll do that using code auto-completion.
-        Type <code class="code" data-lang="Java">Sy</code>
+        We'll do that using code auto-completion. Type <code class="code" data-lang="Java">Sy</code>
         The code completion suggestion list is shown.
-        <figure><img alt="Insert System" height="191"
+        <figure><img alt="Insert System"
+                     height="191"
                      src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/HWJ018InsertSystem.png"
-                     title="HWJ018InsertSystem"
                      width="580">
         </figure>
-        Select <span class="control">System (java.lang)</span> by pressing <kbd
-            class="keystroke">Enter</kbd>.
-        Type <code class="code" data-lang="Java">.o</code> and press
+        Select <span class="control">System (java.lang)</span> by pressing
+        <kbd class="keystroke">Enter</kbd>. Type <code class="code" data-lang="Java">.o</code> and press
         <kbd class="keystroke">Ctrl+.</kbd>.
-
         <figure><img alt="Insert Out" height="191"
                      src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779316/java/HWJ020InsertOut.png"
-                     title="HWJ020InsertOut" width="580">
+                     width="580">
         </figure>
         <code class="code" data-lang="Java">out</code> is inserted followed by a dot. (You can
         select an item in the suggestion list by pressing <kbd class="keystroke">Ctrl+.</kbd>. In that case,
         the selected item is inserted into the editor followed by a dot.)
-        Type <code class="code" data-lang="Java">p</code> and then find and select <span
-            class="control">println(String x)</span>.
-        <figure><img alt="Insert Print Ln" height="191"
-                     src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ022InsertPrintLn.png"
-                     title="HWJ022InsertPrintLn"
-                     width="580">
+        Type <code class="code" data-lang="Java">p</code> and then find and select
+        <span class="control">println(String x)</span>.
+        <figure>
+            <img alt="Insert Print Ln"
+                 height="191"
+                 src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ022InsertPrintLn.png"
+                 width="580">
         </figure>
         IntelliJ IDEA prompts you which parameter types can be used in the current
         context.
-        <figure><img alt="Print Ln Inserted" height="340"
+        <figure><img alt="Print Ln Inserted"
+                     height="340"
                      src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ023PrintLnInserted.png"
-                     title="HWJ023PrintLnInserted"
                      width="580"></figure>
         Type <code class="code" data-lang="Java">"</code>
         The second quotation mark is inserted automatically and the cursor is placed between
         the quotation marks. Type <code class="code" data-lang="Java">Hello, World!</code>
-        <figure><img alt="Code Ready" height="191"
+        <figure><img alt="Code Ready"
+                     height="191"
                      src="https://res.cloudinary.com/mhussainshah1/image/upload/v1550779314/java/HWJ024CodeReady.png"
-                     title="HWJ024CodeReady" width="580">
+                     width="580">
         </figure>
         The code at this step is ready.
-
-        <h1 class="title-style" id="use_live_template_println">
-            Using a live template for println()</h1>
-        As a side note, we could have inserted the call to <code class="code"
-                                                                 data-lang="Java">println()</code>
+        <h1 class="title-style" id="use_live_template_println"> Using a live template for println()</h1>
+        As a side note, we could have inserted the call to
+        <code class="code" data-lang="Java">println()</code>
         by using a live template (<code class="code" data-lang="Java">sout</code>).
-        If you think that it's enough for live templates, proceed to <a
-            href="#run_app">running the
-        application</a>. Otherwise, try that now as an additional exercise. Delete
-        <div class="code-block"><a class="code-block__copy-button" data-clipboard-target="#tUeP-FTri-"><span
-                class="code-block__copy-button-icon"></span></a>
-            <div id="tUeP-FTri-"><code class="code-block__wrapper"><span class="n" key="0">System</span><span
-                    class="o" key="1">.</span><span class="na" key="2">out</span><span class="o"
-                                                                                       key="3">.</span><span
-                    class="na" key="4">println</span><span class="o" key="5">(</span><span class="s" key="6">"Hello, World!"</span><span
-                    class="o" key="7">);</span></code></div>
+        If you think that it's enough for live templates, proceed to
+        <a href="#run_app">running the application</a>. Otherwise, try that now as an additional exercise. Delete
+        <div class="code-block">
+            <a class="code-block__copy-button" data-clipboard-target="#tUeP-FTri-">
+                <span class="code-block__copy-button-icon"></span></a>
+            <div id="tUeP-FTri-"><code class="code-block__wrapper">
+                <span class="n" key="0">System</span>
+                <span class="o" key="1">.</span>
+                <span class="na" key="2">out</span>
+                <span class="o" key="3">.</span>
+                <span class="na" key="4">println</span>
+                <span class="o" key="5">(</span>
+                <span class="s" key="6">"Hello, World!"</span>
+                <span class="o" key="7">);</span></code></div>
         </div>
         Type <code class="code" data-lang="Java">s</code>, press <kbd class="keystroke">Ctrl+J</kbd> and select
         <span class="control">sout - Prints a string to System.out</span>.
@@ -332,9 +350,9 @@
                 <code class="code-block__wrapper">
                     <span class="n" key="0">System</span>
                     <span class="o" key="1">.</span>
-                    <span class="na" key="2">out</span>
+                    <span class="na"key="2">out</span>
                     <span class="o" key="3">.</span>
-                    <span class="na" key="4">println</span>
+                    <span class="na"key="4">println</span>
                     <span class="o" key="5">();</span>
                 </code>
             </div>
@@ -344,21 +362,19 @@
         <code class="code" data-lang="Java">)</code>.Type
         <code class="code" data-lang="Java">"</code> and then type
         <code class="code" data-lang="Java">Hello, World!</code>
-
     </div>
-
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
