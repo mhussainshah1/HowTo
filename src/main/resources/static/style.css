@@ -1,12 +1,3 @@
-.title-style{
-    text-decoration: underline;
-    font-family: 'Felipa','Dancing Script', cursive;
-}
-
-.control{
-    font-weight: 600;
-}
-
 strong{
     margin: 0;
     padding: 0;
@@ -18,38 +9,33 @@ strong{
 
 }
 
-.keystroke{
-
+.control{
+    font-weight: 600;
 }
 
-.inline-icon-16{
-
+.code-block .k, .code-block .kc, .code-block .kd, .code-block .kn, .code-block .kr, .code-block .kt {
+    color: #0037b3;
+    font-weight: 500
 }
 
-.na{
-
+.code-block .na {
+    color: #00f
 }
-.kd{
 
+.code-block .nn,.code-block .n, .code-block .nf, .code-block .o {
+    color: #000
 }
-.kt{
 
+.code-block .s, .code-block .s1, .code-block .sc, .code-block .sd, .code-block .ss {
+    color: #009c00
 }
-.kn{
 
+.inline-icon-16 {
+    min-width: 16px;
+    margin-bottom: -1px
 }
-.nn{
 
-}
-.n{
-
-}
-.o{
-
-}
-.s{
-
-}
-.nf{
-
+.title-style{
+    text-decoration: underline;
+    font-family: 'Felipa','Dancing Script', cursive;
 }
